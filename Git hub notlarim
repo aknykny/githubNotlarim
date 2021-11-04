@@ -1,3 +1,9 @@
+repo yu kopyala
+git clone url
+
+bir proje yi git e eklemek
+git init [projectName]
+
 proje klasorunu VCS e eklemek icin
     git init 
 
@@ -27,6 +33,44 @@ Bu HEAD degistirildiginde onceki versiyonlara donus yapilir.
     git restore .          => butun dosyalari iptal eder
 
     git restore --staged [dosya]    => staging teki bir dosyayi iptal eder
+
     git restore --staged .          => butun dosyalari iptal eder
 
-    bu yeni versiyon 2
+    git checkout -- => eger degisiklikler commit edilmemisse en son commit e geri donecek sekilde degisiklikleri siler
+
+    git revert hashcode => bu da bir onceki commit e geri doner ve otomatik olarak commit  i olusturur
+    git revert -n hashcode => bu is otomatik commit yapmadan ilgili versiyona donus yapar
+
+    MERGE
+    meerge branch_a into branch_b
+    git checkout branch_b
+    git merge branch_a
+
+    merge islemini iptal etmek icin kullanilir
+    git merge -abort
+
+    revert everything to last commit
+    git reset --hard --
+
+    STASH
+    git stash save 'stash name'
+    git stash list
+    git stash apply {stash}
+    git stash pop => apply the last STASH
+
+    BRANCH
+    git branch newBranch
+    git checkout newBranch
+    git branch -d branchName to delete
+
+    git restore --staged .          => butun dosyalari iptal eder
+
+    CHECKOUT
+        git checkout [hash][fileName]
+        git checkout [hash] .
+
+        checkout tan sonra eger commit yapilmazsa versiyon basa alinmaz
+        sonrasinda yeniden ayni yukaridaki sekilde yeniden versiyon degistirilebilir
+            git add .
+            git commit -m "message"
+    
