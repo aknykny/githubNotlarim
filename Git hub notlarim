@@ -49,28 +49,37 @@ Bu HEAD degistirildiginde onceki versiyonlara donus yapilir.
     merge islemini iptal etmek icin kullanilir
     git merge -abort
 
-    revert everything to last commit
-    git reset --hard --
+
 
     STASH
-    git stash save 'stash name'
-    git stash list
-    git stash apply {stash}
-    git stash pop => apply the last STASH
+    git stash save 'stash name'         => stash olusturur
+    git stash list                      => stashlari listeler
+    git stash apply {stash}             => ilgili stash apply eder
+    git stash pop                       => apply the last STASH
 
     BRANCH
-    git branch newBranch
-    git checkout newBranch
-    git branch -d branchName to delete
+    git branch                          => branchlari listeler
+    git branch newBranch                => yeni branch olusturur
+    git branch -d branchName to delete  => ismi verilen branch i siler
+    git branch -m newBranchName         => mecvut branchin ismini degistirir.
 
-    git restore --staged .          => butun dosyalari iptal eder
+
+    RESTORE
+    git restore --staged .              => butun dosyalari iptal eder
 
     CHECKOUT
-        git checkout [hash][fileName]
-        git checkout [hash] .
+        git checkout newBranch          => baska branch a gecis yapar
+        git checkout -b branchName            => branc create eder ve checkout islemini de yapar
+        git checkout [hash][fileName]   => bir file i istenen versiyona dondurur
+        git checkout [hash] .           => butun dosyalari istenen versiyona dondurur
 
         checkout tan sonra eger commit yapilmazsa versiyon basa alinmaz
-        sonrasinda yeniden ayni yukaridaki sekilde yeniden versiyon degistirilebilir
+        sonrasinda yeniden ayni yukaridaki sekilde yeniden versiyon degistirilebilir. bunun yerine revert kullanilabilir
             git add .
             git commit -m "message"
+        
+        git checkout --                 => commit edilmemis degisiklikleri geri alir. staging ve working area hepsini
     
+    RESET
+    git reset --hard [hash]             =>bu versiyona gider ve aradaki diger versiyonlari siler ve o versiyona doner
+        
