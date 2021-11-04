@@ -28,3 +28,5 @@ Bu HEAD degistirildiginde onceki versiyonlara donus yapilir.
 
     git restore --staged [dosya]    => staging teki bir dosyayi iptal eder
     git restore --staged .          => butun dosyalari iptal eder
+
+    bu yeni versiyon 2
