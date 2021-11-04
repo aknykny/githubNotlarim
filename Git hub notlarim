@@ -1,0 +1,30 @@
+proje klasorunu VCS e eklemek icin
+    git init 
+
+
+Degisikleri remote dan local e indirir
+    git fetch 
+
+Inidirilen degisikleri local depoya uygular
+    git merge 
+
+veya fetch & pull ikisini beraber yapmak icin
+    git pull 
+
+Versiyonlama
+    - git add fileName veya .
+    - git commit -m'message'
+    bu sekilde versiyon olusturulmus oluyor.
+
+git log => bir versiyon da hangi degisikliklerin oldugunu gormek icin kullanilir
+
+git show {hashCoduununIlk7Karakteri}
+
+NOT; Bir den fazla komit her zaman bir repo icinde olabilir. en son alinan commit e HEAD denir. 
+Bu HEAD degistirildiginde onceki versiyonlara donus yapilir.
+
+    git restore [dosya]     => tek bir dosyayi iptal eder
+    git restore .          => butun dosyalari iptal eder
+
+    git restore --staged [dosya]    => staging teki bir dosyayi iptal eder
+    git restore --staged .          => butun dosyalari iptal eder
