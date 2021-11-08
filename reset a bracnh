@@ -1,0 +1,8 @@
+git checkout main
+git pull
+git checkout staging
+git reset --hard origin/main
+git push --force origin staging
+
+
+staging to staging

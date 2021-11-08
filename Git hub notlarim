@@ -22,21 +22,22 @@ Versiyonlama
     - git commit -m'message'
     bu sekilde versiyon olusturulmus oluyor.
 
-git log => bir versiyon da hangi degisikliklerin oldugunu gormek icin kullanilir
+git log                 => bir versiyon da hangi degisikliklerin oldugunu gormek icin kullanilir
+git log --oneline       => commitleri one line da gosterir
 
 git show {hashCoduununIlk7Karakteri}
 
 NOT; Bir den fazla komit her zaman bir repo icinde olabilir. en son alinan commit e HEAD denir. 
 Bu HEAD degistirildiginde onceki versiyonlara donus yapilir.
 
-    git restore [dosya]     => tek bir dosyayi iptal eder
-    git restore .          => butun dosyalari iptal eder
+    git restore [dosya]             => tek bir dosyayi iptal eder
+    git restore .                   => butun dosyalari iptal eder
 
     git restore --staged [dosya]    => staging teki bir dosyayi iptal eder
 
     git restore --staged .          => butun dosyalari iptal eder
 
-    git checkout -- => eger degisiklikler commit edilmemisse en son commit e geri donecek sekilde degisiklikleri siler
+    git checkout --                 => eger degisiklikler commit edilmemisse en son commit e geri donecek sekilde degisiklikleri siler
 
     git revert hashcode => bu da bir onceki commit e geri doner ve otomatik olarak commit  i olusturur
     git revert -n hashcode => bu is otomatik commit yapmadan ilgili versiyona donus yapar
