@@ -1,1 +1,0 @@
-baska dosyayi olusturdum ve cm dim
