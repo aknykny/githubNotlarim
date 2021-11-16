@@ -1,1 +1,0 @@
-dosyayi olusturdum ve commitledim
