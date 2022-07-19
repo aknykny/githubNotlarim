@@ -1,3 +1,18 @@
+iki accountla calisiyorsan, we push isleminde karistirmamak icin
+    git config user.name "uraccount"
+    git config user.email "uraccount@gmail.com"
+ayarlarini repo dan sonra yapmalisin
+
+adding ssh key to git account
+    ssh-add ~/.ssh/id_rssa
+to see current git account
+    git config user.name
+    or
+    cat ~/.gitconfig 
+
+
+
+
 repo yu kopyala
 git clone url
 
